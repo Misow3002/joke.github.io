@@ -1,0 +1,136 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>HACKER TEST</title>
+<script language="javascript">
+function verif()
+{
+
+if (f.ncin.value.length!=8)
+{
+alert('NCIN LENGTH 8 REQUIRED!');
+return false;
+}
+if(isNaN(f.ncin.value))
+{
+alert('ONLY NUMBERS ARE ALLOWEDED');
+return false;
+}
+if (!(f.ncin.value.charAt(0)=="1" || f.ncin.value.charAt(0)=="0"))
+{
+alert('START-UP WITH 1 O|R  0 ');
+return false;
+}
+if (f.nom.value=='')
+{
+alert('NOM CASE NULL');
+return false;
+}
+if (f.ncin.value.indexOf('.')!=-1)
+{
+alert('NCIN CONTAINS POINTS');
+return false;
+}
+if (!(f.etat[0].checked || f.etat[1].checked))
+{
+alert('CHECK CASE REQUIRED');
+return false;
+}
+if (!f.ar.checked && f.fr.checked== false && !f.an.checked)
+{
+alert('CHOOSE LANGUE REQUIRED ');
+return false;
+}
+nb=0;
+for (i=0 ;i<f.email.value.length ;i++)
+{
+if (f.email.value.charAt(i)=='@')
+nb++;
+}
+if (nb>1)
+{
+alert('EXTRA  @ ');
+return false;
+}
+if (f.email.value.indexOf('@')== -1)
+{
+alert('@ NOT FOUND 404 ');
+return false;
+}
+if (f.email.value.indexOf('.')== -1)
+{
+alert('MISSING DOMMAINE .FR |.COM |.NET ');
+return false;
+}
+if (f.email.value.indexOf('@')== 0)
+{
+alert('@ FOUND IN FIRST-PLACE ');
+return false;
+}
+}
+alert("WELCOME TO OUR COMMUNITY");
+
+</script>
+<!--mstheme--><link rel="stylesheet" href="bala1011.css">
+<meta name="Microsoft Theme" content="balance 1011">
+</head>
+<body>
+
+<form method="POST" name="f" action="lol.html" onsubmit="return verif();">
+	
+	<center><p><img border="0" src="wissem.jpg" width="760" height="260"></p></center>
+	
+	<table border="0" width="100%">
+		<tr>
+			<td width="355">Ncin</td>
+			<td><input type="text" name="ncin" size="20"></td>
+		</tr>
+		<tr>
+			<td width="355">Nom</td>
+			<td><input type="text" name="nom" size="20"></td>
+		</tr>
+		<tr>
+			<td width="355">Email</td>
+			<td><input type="text" name="email" size="20"></td>
+		</tr>
+		<tr>
+			<td width="355">Classe</td>
+			<td><select size="1" name="cl">
+			<option selected value="choisir">choisir</option>
+			<option value="4SI">4SI</option>
+			<option value="4 TECH">4 TECH</option>
+			<option value="4SC">4SC</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td width="355">Etat Civil</td>
+			<td>Marie<input type="radio" value="V1" name="etat">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" value="V2" name="etat">Celebataire</td>
+		</tr>
+		<tr>
+			<td width="355">Langue(s) </td>
+			<td>Arabe <input type="checkbox" name="ar" value="ON">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Francais <input type="checkbox" name="fr" value="ON">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Anglais <input type="checkbox" name="an" value="ON"></td>
+		</tr>
+		<tr>
+			<td width="355">Adresse</td>
+			<td><textarea rows="2" name="adr" cols="20"></textarea></td>
+		</tr>
+		<tr>
+			<td width="355">&nbsp;</td>
+			<td><center><img border="0" src="approved.png" width="295" height="243"></center></td>
+		</tr>
+		<tr>
+			<td width="355"><input type="submit" value="Envoyer" name="B1" onsubmit="verif()"></td>
+			<td><input type="reset" value="Rétablir" name="B2"></td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+</form>
+
+</body>
+
+</html>
