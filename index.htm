@@ -4,6 +4,42 @@
 <meta http-equiv="Content-Language" content="fr">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <title>HACKER TEST</title>
+	<script language="Javascript"><!--
+// Courtesy of SimplytheBest.net - http://simplythebest.net/scripts/
+var tl=new Array(
+"\nWelcome To Our New Site. ", 
+"\nThis Site is Made for Fun .", 
+"\nMisow3002 will help you improve your JavaScript, PHP, HTML and graphic thinking in a fun way that will entertain any visitor!", 
+"\nHave a spare minute? Log on! Each level will provide you with a new, harder clue to find a way to get to another level.", 
+"\nWill you crack Me ? =]" // Do not add a comma (,) at the end of the last row of text. 
+);
+var speed=1;
+var index=0; text_pos=0;
+var str_length=tl[0].length;
+var contents, row;
+function password()
+{
+  contents='';
+  row=Math.max(0,index-9);
+  while(row<index)
+    contents += tl[row++] + '\r\n';
+  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "_";
+  if(text_pos++==str_length)
+  {
+    text_pos=0;
+    index++;
+    if(index!=tl.length)
+    {
+      str_length=tl[index].length;
+      setTimeout("password()",2000);
+    }
+  } else
+    setTimeout("password()",speed);
+}
+//-->
+</script>
+
+
 <script language="javascript">
 function verif()
 {
