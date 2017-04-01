@@ -1,14 +1,28 @@
+
 <html>
 <link rel="icon" type="image/jpg" href="http://images.all-free-download.com/images/graphiclarge/letter_h_black_96990.jpg" />
 <title>LAST-LEVEL</title>
 <head>
 <script language="javascript">
+function vara ()
+{
+ch=f.a.value;
+ch2=''
+ for (i=0;i<ch.length;i++)
+ {
+  if (ch.charAt(i)>="A" && ch.charAt(i)<="Z" || ch.charAt(i)>="a" && ch.charAt(i)<="z")
+  {
+  alert('Think Like A Pro =] ');
+  ch2=ch2+ch.charAt(i);
+  return false;
+  }
+  }
+}
 function poso ()
 {
 if (f.a.value.charAt(0)==' ')
 {
 alert('Congrats :P ');
-window.location.href="booby.htm";
 }
 else
 {
@@ -20,23 +34,29 @@ return false;
 
 </head>
 <body bgcolor="#666666">
-<img src="https://misow3002.github.io/joke.github.io/freddy.gif" width="485" height="279">
+<img src="freddy.gif" width="485" height="279">
 <div align="center">
 <center>
-&nbsp;<table border="1" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="15%" id="AutoNumber4">
+&nbsp;
+	<p>&nbsp;</p>
+</form>
+<form method="GET" action="booby.htm">
+<table border="1" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111" width="15%" id="AutoNumber4">
 <tr>
 <td width="100%">
-<p align="center"><font size="1" face="Tahoma"><br>
-</font><font size="2" face="Tahoma">Password:</font><form name="f" onsubmit="return poso();" >
 <p align="center">
-<input type="login" name="a" maxlength="25" size="16"><br>
+<font size="1" face="Tahoma"><br>
+</font><font size="2" face="Tahoma">Password:</font><form name="f" onsubmit="return poso()">
+<p align="center">
+<input type="login" name="a" maxlength="25" size="16" onblur="vara()"><br>
 <span style="letter-spacing: -3pt">Alphabets May Kill You</span><br>
-<input type="submit" value=" Log In "></p>
+<input type="submit" value="Log In" name="B1"></p>
 </form></p>
 </td>
 </tr>
 </center>
 </table>
+<p>&nbsp;</p>
 </div>
 </font></b></p>
 <table border="0" width="41%">
@@ -44,6 +64,10 @@ return false;
 		<td><font face="Modern No. 20" size="7">Don't Get Mad =)</font></td>
 	</tr>
 </table>
-<br>&nbsp;
+	<p>&nbsp;</p>
+</form>
+<p>&nbsp;</p>
+&nbsp;
+
 </body>
 </html>
